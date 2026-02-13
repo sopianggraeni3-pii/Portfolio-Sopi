@@ -59,7 +59,6 @@ body {
   transition: 0.3s ease;
 }
 
-
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -72,25 +71,26 @@ body {
 }
 
 .nav-links a:hover{
-  width: 100%;
   color:#1e40af;
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
 
+/* HOME SECTION */
 .home{
   background: linear-gradient(135deg, #e0f2fe, #c7d2fe);
   min-height:calc(100vh - 70px);
   display:flex;
   align-items:center;
-
 }
-
 
 .home-wrapper {
   display:grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items:center;
-  gap:80px;
+  gap: 40px;
 
 }
 
@@ -121,7 +121,7 @@ body {
 }
 
 .home-text {
- padding-left: 50px;
+ padding-left: 0px;
 }
 
 .home-text h3 {
@@ -134,7 +134,6 @@ body {
   margin-bottom: 5px;
 }
 
-
 .home-text h1 {
   font-size: 48px;
   font-weight: 700;
@@ -146,8 +145,8 @@ body {
   margin-bottom: 18px;
   max-width: 500px;
   font-size: 15px;
-
 }
+
 .multiple-text {
   color: #1e40af; 
   font-weight: 700; 
@@ -162,7 +161,7 @@ body {
   box-shadow: none;
   font-size: 14px;
   color: #ffffff;
-  letter-spacing: 0.5 px;
+  letter-spacing: 0.5px;
   font-weight: 500;
   transition: 0.3s ease;
 }
@@ -178,20 +177,19 @@ body {
     text-align: center;
   }
 
-  
   .home-img {
     order: -1;
   }
+}
 
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .about {
   padding: 100px 0;
   background: linear-gradient(to bottom, #ffffff, #eaf2ff);
-
 }
 
 .about .container {
@@ -206,7 +204,6 @@ body {
   gap: 80px;
   padding: 0 20px;
 }
-
 
 .about-text h2 {
   font-size: 36px;
@@ -255,7 +252,7 @@ body {
 
 }
 
-/* ================= SKILLS ================= */
+/*  SKILLS  */
 
 .skills {
   padding: 100px 0;
@@ -318,7 +315,7 @@ body {
 
 }
 
-/* ================= TOOLS WITH ICON ================= */
+/* TOOLS */
 
 .tools {
   padding: 100px 0;
@@ -360,11 +357,11 @@ body {
 
 @media (max-width: 768px) {
   .tools-wrapper {
-    grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom di HP agar tidak terlalu panjang */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-/* ================= PROJECTS ================= */
+/*  PROJECTS */
 
 .projects {
   padding: 100px 0;
@@ -429,10 +426,10 @@ body {
 
 }
 
-/* ================= CONTACT ================= */
+/*  CONTACT */
 
 .contact {
-  padding: 100px 0;
+  padding: 40px 0;
   background: linear-gradient(to bottom, #ffffff, #eaf2ff);
   text-align: center;
 }
@@ -442,6 +439,19 @@ body {
   display: flex;
   justify-content: center;
   gap: 40px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;         
+    max-width: 350px;  
+    margin: 30px auto 0;
+}
+
+.contact-icons a {
+    margin: 0;          
 }
 
 .contact-wrapper a {
@@ -472,7 +482,7 @@ body {
   color: white;
 }
 
-/* ================= FOOTER ================= */
+/*  FOOTER */
 
 .footer {
   background: #272722;
@@ -496,4 +506,50 @@ body {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+  .projects-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

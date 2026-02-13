@@ -30,22 +30,24 @@
   <!-- HOME SECTION -->
   <section class="home" id="home">
     <div class="container home">
+      <div class="home-wrapper">
 
-      <div class="home-img">
-        <img src="assets/banner.png" alt="Profile Image">
-      </div>
+        <div class="home-img">
+          <img src="assets/banner.png" alt="Profile Image">
+        </div>
 
-      <div class="home-text">
-        <h3>Hello, It's Me</h3>
-        <h1>Sopi Anggraeni</h1>
-        <h3>And I'm a <span class="multiple-text"></span></h3>
-        <p>
-          Informatics student passionate about building clean and
-          user-friendly web experiences.
-        </p>
+        <div class="home-text">
+          <h3>Hello, It's Me</h3>
+          <h1>Sopi Anggraeni</h1>
+          <h3>And I'm a <span class="multiple-text"></span></h3>
+          <p>
+            Informatics student passionate about building clean and
+            user-friendly web experiences.
+          </p>
 
-        <a href="#" class="btn">More About Me</a>
-      </div>
+          <button id="welcomeBtn" class="btn">Click Here</button>
+        </div>
+     </div>
     </div>
   </section>
 
@@ -70,7 +72,6 @@
 </section>
 
 <section class="skills" id="skills">
-  <section class="skills reveal">
   <div class="container">
 
     <div class="section-title">
@@ -167,45 +168,30 @@
 
       <!-- Project 1 -->
       <div class="project-card">
-        <div class="project-img">
-          <img src="assets/project1.jpg" alt="Project 1">
-        </div>
         <div class="project-content">
           <h3>Portfolio Website</h3>
           <p>Responsive personal portfolio built with HTML and CSS.</p>
           <div class="project-links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub</a>
           </div>
         </div>
       </div>
 
       <!-- Project 2 -->
       <div class="project-card">
-        <div class="project-img">
-          <img src="assets/project2.jpg" alt="Project 2">
-        </div>
         <div class="project-content">
-          <h3>To-Do List App</h3>
-          <p>Interactive task management app using JavaScript.</p>
+          <h3>Sangkali Health Center Collaboration Website</h3>
+          <p>A collaborative web platform developed with Sangkali Health Center to promote healthy eating habits, providing users with nutrition guides and balanced meal plans.</p>
           <div class="project-links">
-            <a href="#">Live Demo</a>
-            <a href="#">GitHub</a>
           </div>
         </div>
       </div>
 
       <!-- Project 3 -->
       <div class="project-card">
-        <div class="project-img">
-          <img src="assets/project3.jpg" alt="Project 3">
-        </div>
         <div class="project-content">
           <h3>Landing Page Design</h3>
           <p>Modern UI landing page concept designed in Figma.</p>
           <div class="project-links">
-            <a href="#">Preview</a>
-            <a href="#">Details</a>
           </div>
         </div>
       </div>
@@ -225,19 +211,19 @@
 
     <div class="contact-wrapper">
 
-      <a href="mailto:emailkamu@gmail.com" target="_blank">
+      <a href="mailto:sopianggraeni3@gmail.com" target="_blank">
         <i class='bx bx-envelope'></i>
       </a>
 
-      <a href="https://github.com/usernamekamu" target="_blank">
+      <a href="https://github.com/sopianggraeni3-pii" target="_blank">
         <i class='bx bxl-github'></i>
       </a>
 
-      <a href="https://linkedin.com/in/usernamekamu" target="_blank">
+      <a href="https://linkedin.com/in/SopiAnggraeni" target="_blank">
         <i class='bx bxl-linkedin'></i>
       </a>
 
-      <a href="https://instagram.com/usernamekamu" target="_blank">
+      <a href="https://instagram.com/_sopiipay" target="_blank">
         <i class='bx bxl-instagram'></i>
       </a>
 
@@ -278,6 +264,17 @@
     loop: true
   });
 </script>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close-btn" id="closePopup">&times;</span>
+    <h3>Thank You 🙌</h3>
+    <p>Thank you for visiting my portfolio.
+        I look forward to connecting with you. </p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
 
 </body>
 

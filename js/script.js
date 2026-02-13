@@ -1,11 +1,11 @@
-function showMessage() {
-    alert("Terima kasih telah mengunjungi portofolio saya!");
-}
+const welcomeBtn = document.getElementById("welcomeBtn");
+const popup = document.getElementById("popup");
+const closePopup = document.getElementById("closePopup");
 
-var typed= new typed(".text", {
-    String:["Web Developer", "Ilustrator", "crocheter"],
-    typeSpeed:100,
-    backSpeed:100,
-    backDelay:1000,
-    loop:true
-})
+welcomeBtn.addEventListener("click", function() {
+  popup.style.display = "flex";
+});
+
+closePopup.addEventListener("click", function() {
+  popup.style.display = "none";
+});
